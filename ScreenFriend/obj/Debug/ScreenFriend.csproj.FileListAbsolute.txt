@@ -1,0 +1,2 @@
+c:\users\steven\documents\visual studio 2015\Projects\ScreenFriend\ScreenFriend\bin\Debug\ScreenFriend.exe.config
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\bin\Debug\ScreenFriend.exe.config
