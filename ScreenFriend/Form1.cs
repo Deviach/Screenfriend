@@ -101,6 +101,9 @@ namespace ScreenFriend
             FileStream fs = new FileStream(path, FileMode.CreateNew);
             imgToSave.Save(fs, ImageFormat.Png);
             fs.Close();
+            label1.Visible = true;
+            label1.ForeColor = Color.Green;
+            label1.Text = "File saved at " + DateTime.Now.ToString("HH:mm:ss");
         }
 
         private void pictureBoxClick(object sender, EventArgs e)
