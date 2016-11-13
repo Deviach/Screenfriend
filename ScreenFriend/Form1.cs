@@ -80,6 +80,8 @@ namespace ScreenFriend
             {
                 pb.Dispose();
             }
+            images.Clear();
+            pics.Clear();
             lastx = 0;
             lasty = 0;
             panel1.Refresh();
