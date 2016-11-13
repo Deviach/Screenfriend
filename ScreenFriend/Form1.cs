@@ -108,14 +108,23 @@ namespace ScreenFriend
 
         private void pictureBoxClick(object sender, EventArgs e)
         {
-            foreach (PictureBox pb in pics)
-            {
-                pb.BorderStyle = BorderStyle.None;
-            }
+            MouseEventArgs me = (MouseEventArgs)e;
             PictureBox p = (PictureBox)sender;
-            p.BorderStyle = BorderStyle.FixedSingle;
-            button2.Enabled = true;
-            imgToSave = p.Image;
+            if (me.Button == MouseButtons.Left) { 
+                foreach (PictureBox pb in pics)
+                {
+                    pb.BorderStyle = BorderStyle.None;
+                }
+                
+                p.BorderStyle = BorderStyle.FixedSingle;
+                button2.Enabled = true;
+                imgToSave = p.Image;
+            }
+            else
+            {
+                LargePicture lp = new LargePicture(p.Image);
+                lp.Show();
+            }
         }
     }
 }
