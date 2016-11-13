@@ -1,2 +1,10 @@
 c:\users\steven\documents\visual studio 2015\Projects\ScreenFriend\ScreenFriend\bin\Debug\ScreenFriend.exe.config
 C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\bin\Debug\ScreenFriend.exe.config
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\bin\Debug\ScreenFriend.exe
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\bin\Debug\ScreenFriend.pdb
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debug\ScreenFriend.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debug\ScreenFriend.Form1.resources
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debug\ScreenFriend.Properties.Resources.resources
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debug\ScreenFriend.csproj.GenerateResource.Cache
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debug\ScreenFriend.exe
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debug\ScreenFriend.pdb
