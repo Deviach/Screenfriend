@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +27,7 @@ namespace ScreenFriend
             //lastx = panel1.Location.X;
             //lasty = panel1.Location.Y;
             pics = new List<PictureBox>();
+            textBox1.Text = Directory.GetCurrentDirectory();
             images = new Dictionary<int, Image>();
         }
 
@@ -80,6 +83,22 @@ namespace ScreenFriend
             lastx = 0;
             lasty = 0;
             panel1.Refresh();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.SelectedPath = Directory.GetCurrentDirectory();
+            fbd.ShowDialog();
+            textBox1.Text = fbd.SelectedPath;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string path = textBox1.Text + @"\" + DateTime.Now.ToString("YYYY-MM-dd-HH-mm-ss")+".png";
+            FileStream fs = new FileStream(path, FileMode.CreateNew);
+            imgToSave.Save(fs, ImageFormat.Png);
+            fs.Close();
         }
 
         private void pictureBoxClick(object sender, EventArgs e)
