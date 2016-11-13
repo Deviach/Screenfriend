@@ -20,6 +20,20 @@ namespace ScreenFriend
             this.Size = img.Size;
         }
 
-        
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.W))
+            {
+                this.Close();
+                return true;
+            }
+            else if (keyData == (Keys.Control | Keys.X))
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
     }
 }
