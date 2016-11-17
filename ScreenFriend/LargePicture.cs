@@ -25,11 +25,13 @@ namespace ScreenFriend
             if (keyData == (Keys.Control | Keys.W))
             {
                 this.Close();
+                this.Dispose();
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.X))
             {
                 this.Close();
+                this.Dispose();
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);

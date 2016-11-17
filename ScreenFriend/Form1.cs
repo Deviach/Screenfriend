@@ -33,6 +33,7 @@ namespace ScreenFriend
 
         private void button1_Click(object sender, EventArgs e)
         {
+            panel1.VerticalScroll.Value = 0;
             if (Clipboard.ContainsImage())
             {
                 images.Add(Clipboard.GetImage().GetHashCode(), Clipboard.GetImage());
@@ -40,12 +41,17 @@ namespace ScreenFriend
                 p.Image = Clipboard.GetImage();
                 p.Visible = true;
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
-                p.SetBounds(lastx, lasty, boxW, boxH);
+                Point pt = new Point(lastx, lasty);
+                //pt.Offset(panel1.AutoScrollOffset);
+                p.SetBounds(pt.X,pt.Y,boxW, boxH);
                 lastx = (lastx + boxW+bufferSpace);
                 if ((lastx + boxW + bufferSpace) > panel1.Width)
                 {
+                    Point npt = new Point(0, (lasty+boxH + bufferSpace));
+                    
                     lastx = 0;
-                    lasty += boxH + bufferSpace;
+
+                    lasty = npt.Y;
                 }
                 panel1.Controls.Add(p);
                 pics.Add(p);
@@ -124,6 +130,7 @@ namespace ScreenFriend
             {
                 LargePicture lp = new LargePicture(p.Image);
                 lp.Show();
+                
             }
         }
     }
