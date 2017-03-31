@@ -94,7 +94,15 @@ namespace ScreenFriend
                 }),
                     Visible = true
                 };
-                trayIcon.ShowBalloonTip(4000, "ScreenFriend", "ScreenFriend is now running.",ToolTipIcon.Info);
+                if (Properties.Settings.Default.startTray)
+                {
+                    if(Properties.Settings.Default.notifyRun)
+                        trayIcon.ShowBalloonTip(4000, "ScreenFriend", "ScreenFriend is now running.", ToolTipIcon.Info);
+                }
+                else
+                {
+                    Show(null,null);
+                }
             }
 
             void Exit(object sender, EventArgs e)

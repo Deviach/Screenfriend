@@ -129,13 +129,28 @@ namespace ScreenFriend
             
         }
 
-        
-
-      
-
-        private void OnKeyPress(object sender, KeyPressEventArgs e)
+        private void hideToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("LELELE");
+            this.Hide();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void startInTrayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            startInTrayToolStripMenuItem.Checked = !startInTrayToolStripMenuItem.Checked;
+            Properties.Settings.Default.startTray = !Properties.Settings.Default.startTray;
+            Properties.Settings.Default.Save();
+        }
+
+        private void notifyOnRunToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notifyOnRunToolStripMenuItem.Checked = !notifyOnRunToolStripMenuItem.Checked;
+            Properties.Settings.Default.notifyRun = !Properties.Settings.Default.notifyRun;
+            Properties.Settings.Default.Save();
         }
 
         private void pictureBoxClick(object sender, EventArgs e)

@@ -36,13 +36,21 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startInTrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyOnRunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(662, 26);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(382, 33);
+            this.button1.Size = new System.Drawing.Size(67, 19);
             this.button1.TabIndex = 0;
             this.button1.Text = "Capture";
             this.button1.UseVisualStyleBackColor = true;
@@ -59,9 +67,9 @@
             // button2
             // 
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(662, 4);
+            this.button2.Location = new System.Drawing.Point(662, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 33);
+            this.button2.Size = new System.Drawing.Size(67, 25);
             this.button2.TabIndex = 2;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
@@ -114,6 +122,68 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "File Not saved";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.preferencesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(837, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hideToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // hideToolStripMenuItem
+            // 
+            this.hideToolStripMenuItem.Name = "hideToolStripMenuItem";
+            this.hideToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hideToolStripMenuItem.Text = "Hide";
+            this.hideToolStripMenuItem.Click += new System.EventHandler(this.hideToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // preferencesToolStripMenuItem
+            // 
+            this.preferencesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startInTrayToolStripMenuItem,
+            this.notifyOnRunToolStripMenuItem});
+            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.preferencesToolStripMenuItem.Text = "Preferences";
+            // 
+            // startInTrayToolStripMenuItem
+            // 
+            this.startInTrayToolStripMenuItem.Name = "startInTrayToolStripMenuItem";
+            this.startInTrayToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.startInTrayToolStripMenuItem.Text = "Start in tray";
+            this.startInTrayToolStripMenuItem.ToolTipText = "Automatically hide this form when starting and run in background.";
+            this.startInTrayToolStripMenuItem.Click += new System.EventHandler(this.startInTrayToolStripMenuItem_Click);
+            // 
+            // notifyOnRunToolStripMenuItem
+            // 
+            this.notifyOnRunToolStripMenuItem.Checked = true;
+            this.notifyOnRunToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.notifyOnRunToolStripMenuItem.Name = "notifyOnRunToolStripMenuItem";
+            this.notifyOnRunToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.notifyOnRunToolStripMenuItem.Tag = "";
+            this.notifyOnRunToolStripMenuItem.Text = "Notify on run";
+            this.notifyOnRunToolStripMenuItem.ToolTipText = "Show notification when starting from tray.";
+            this.notifyOnRunToolStripMenuItem.Click += new System.EventHandler(this.notifyOnRunToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,9 +197,12 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +218,13 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem startInTrayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem notifyOnRunToolStripMenuItem;
     }
 }
 
