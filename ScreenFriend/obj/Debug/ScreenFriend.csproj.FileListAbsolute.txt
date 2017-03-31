@@ -9,3 +9,4 @@ C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debu
 C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debug\ScreenFriend.exe
 C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debug\ScreenFriend.pdb
 C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\obj\Debug\ScreenFriend.LargePicture.resources
+C:\Users\Steven\Documents\Repositories\screen\Screenfriend\ScreenFriend\bin\Debug\cameraicon.ico

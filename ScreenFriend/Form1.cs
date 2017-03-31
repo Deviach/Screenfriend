@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace ScreenFriend
 {
@@ -110,6 +111,20 @@ namespace ScreenFriend
             label1.Visible = true;
             label1.ForeColor = Color.Green;
             label1.Text = "File saved at " + DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        
+
+      
+
+        private void OnKeyPress(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("LELELE");
         }
 
         private void pictureBoxClick(object sender, EventArgs e)

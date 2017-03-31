@@ -1,6 +1,5 @@
 ## Unreleased
-# Added
--Image capture
--Scrolling
--Image saving
-
+### Added
+* Image Capture
+* Image saving
+* Scrolling
