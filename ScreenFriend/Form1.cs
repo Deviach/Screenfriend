@@ -40,6 +40,7 @@ namespace ScreenFriend
 
         public void addClipboard()
         {
+            System.Threading.Thread.Sleep(1000); //Sleep to give the system time to write to the clipboard.
             button1_Click(null, null);
         }
 

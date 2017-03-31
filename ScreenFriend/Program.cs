@@ -18,9 +18,11 @@ namespace ScreenFriend
 
         private const int WH_KEYBOARD_LL = 13;
         private const int WM_KEYDOWN = 0x0100;
+        private const int WM_SYSKEYDOWN = 0x0104;
         private static LowLevelKeyboardProc _proc = HookCallback;
         private static IntPtr _hookID = IntPtr.Zero;
         private const int PRT_SCN = 44;
+        private const int ALT_KEY = 0x12;
         static Form1 reference;
         [STAThread]
         static void Main()
@@ -57,6 +59,14 @@ namespace ScreenFriend
                 }
                 //Console.WriteLine((Keys)vkCode);
                 //MessageBox.Show(vkCode.ToString());
+            }
+            else if (nCode >=0 && wParam == (IntPtr)WM_SYSKEYDOWN)
+            {
+                int vkCode = Marshal.ReadInt32(lParam);
+                if (vkCode == PRT_SCN)
+                {
+                    reference.addClipboard();
+                }
             }
 
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
