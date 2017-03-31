@@ -30,6 +30,17 @@ namespace ScreenFriend
             pics = new List<PictureBox>();
             textBox1.Text = Directory.GetCurrentDirectory();
             images = new Dictionary<int, Image>();
+            this.FormClosing += Form1_FormClosing;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void addClipboard()
+        {
+            button1_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
